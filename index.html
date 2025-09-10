@@ -1,133 +1,133 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Styl Coiffure</title>
-<style>
-    @import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
-    
-    body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        background: #000000;
-        color: white;
-        text-align: center;
-        padding: 50px;
-        min-height: 500vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-    }
-    
-    .header {
-        position: fixed;
-        top: 20px;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        font-family: 'Bungee', cursive;
-        font-size: 1em;
-        z-index: 1000;
-        padding: 0 20px;
-        box-sizing: border-box;
-    }
-    
-    .contact, .adresse {
-        cursor: pointer;
-        transition: color 0.3s ease;
-    }
-    
-    .contact:hover, .adresse:hover {
-        color: #ccc;
-    }
-    
-    .contact {
-        left: 20px;
-    }
-    
-    .adresse {
-        right: 20px;
-    }
-    
-    h1 {
-        font-size: 3em;
-        margin: 50px 0;
-        font-family: 'Bungee', cursive;
-        color: white;
-    }
-    
-    .container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-        max-width: 800px;
-        margin: 50px 0;
-    }
-    
-    .bulle {
-        background: white;
-        color: black;
-        padding: 20px 30px;
-        border-radius: 50px;
-        font-size: 1.2em;
-        font-weight: bold;
-        cursor: pointer;
-        transition: transform 0.3s ease;
-        box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
-    }
-    
-    .bulle:hover {
-        transform: scale(1.1);
-    }
-    
-    .bulle-gauche {
-        margin-right: auto;
-    }
-    
-    .bulle-droite {
-        margin-left: auto;
-    }
-    /* Responsive */
-    @media (max-width: 768px) {
-        .container {
-            flex-direction: column;
-            gap: 30px;
-        }
-        
-        .header {
-            flex-direction: column;
-            text-align: center;
-            gap: 10px;
-        }
-        
-        h1 {
-            font-size: 2em;
-        }
-    }
-</style>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Styl Coiffure</title>
+ <style>
+     @import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+     
+     body {
+         margin: 0;
+         font-family: Arial, sans-serif;
+         background: #000000;
+         color: white;
+         text-align: center;
+         padding: 50px;
+         min-height: 200vh;
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         position: relative;
+     }
+     
+     .header {
+         position: fixed;
+         top: 20px;
+         width: 100%;
+         display: flex;
+         justify-content: space-between;
+         font-family: 'Bungee', cursive;
+         font-size: 1em;
+         z-index: 1000;
+         padding: 0 20px;
+         box-sizing: border-box;
+     }
+     
+     .contact, .adresse {
+         cursor: pointer;
+         transition: color 0.3s ease;
+     }
+     
+     .contact:hover, .adresse:hover {
+         color: #ccc;
+     }
+     
+     .contact {
+         left: 20px;
+     }
+     
+     .adresse {
+         right: 20px;
+     }
+     
+     h1 {
+         font-size: 3em;
+         margin: 50px 0;
+         font-family: 'Bungee', cursive;
+         color: white;
+     }
+     
+     .container {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         width: 100%;
+         max-width: 800px;
+         margin: 50px 0;
+     }
+     
+     .bulle {
+         background: white;
+         color: black;
+         padding: 20px 30px;
+         border-radius: 50px;
+         font-size: 1.2em;
+         font-weight: bold;
+         cursor: pointer;
+         transition: transform 0.3s ease;
+         box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+     }
+     
+     .bulle:hover {
+         transform: scale(1.1);
+     }
+     
+     .bulle-gauche {
+         margin-right: auto;
+     }
+     
+     .bulle-droite {
+         margin-left: auto;
+     }
+     /* Responsive */
+     @media (max-width: 768px) {
+         .container {
+             flex-direction: column;
+             gap: 30px;
+         }
+         
+         .header {
+             flex-direction: column;
+             text-align: center;
+             gap: 10px;
+         }
+         
+         h1 {
+             font-size: 2em;
+         }
+     }
+ </style>
 </head>
 <body>
-<div class="header">
-    <div class="contact" onclick="window.open('tel:0140868060')">Contact 0140868060</div>
-    <div class="adresse" onclick="window.open('https://www.google.com/maps/search/?api=1&query=190+rue+des+Bourguignons+Asnières', '_blank')">190 rue des Bourguignons Asnières</div>
-</div>
-
-<h1 id="titre">Styl Coiffure</h1>
-
-<div class="container">
-    <div class="bulle bulle-gauche">Réservation</div>
-    <div class="bulle bulle-droite">Prix</div>
-</div>
-
-<script>
-    function modifierPolice(nouvellePolice) {
-        const titre = document.getElementById('titre');
-        titre.style.fontFamily = nouvellePolice;
-    }
-</script>
+ <div class="header">
+     <div class="contact" onclick="window.open('tel:0140868060')">Contact 0140868060</div>
+     <div class="adresse" onclick="window.open('https://www.google.com/maps/search/?api=1&query=190+rue+des+Bourguignons+Asnières', '_blank')">190 rue des Bourguignons Asnières</div>
+ </div>
+ 
+ <h1 id="titre">Styl Coiffure</h1>
+ 
+ <div class="container">
+     <div class="bulle bulle-gauche">Réservation</div>
+     <div class="bulle bulle-droite">Prix</div>
+ </div>
+ 
+ <script>
+     function modifierPolice(nouvellePolice) {
+         const titre = document.getElementById('titre');
+         titre.style.fontFamily = nouvellePolice;
+     }
+ </script>
 </body>
 </html>
