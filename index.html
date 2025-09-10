@@ -176,19 +176,19 @@
            const data1 = await window.fs.readFile('Image 1: ');
            const blob1 = new Blob([data1]);
            const url1 = URL.createObjectURL(blob1);
-           document.getElementById('image1').src = url1;
+           document.getElementById('image1').src = "C:\Users\mayst\OneDrive\Bureau\image styl coiffure\image 1.jpg";
 
            // Image 2
            const data2 = await window.fs.readFile('Image 2: ');
            const blob2 = new Blob([data2]);
            const url2 = URL.createObjectURL(blob2);
-           document.getElementById('image2').src = url2;
+           document.getElementById('image2').src = "C:\Users\mayst\OneDrive\Bureau\image styl coiffure\image 2.jpeg";
 
            // Image 3
            const data3 = await window.fs.readFile('Image 3: ');
            const blob3 = new Blob([data3]);
            const url3 = URL.createObjectURL(blob3);
-           document.getElementById('image3').src = url3;
+           document.getElementById('image3').src = "C:\Users\mayst\OneDrive\Bureau\image styl coiffure\image 3.jpg";
        } catch (error) {
            console.error('Erreur lors du chargement des images:', error);
        }
