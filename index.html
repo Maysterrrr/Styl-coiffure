@@ -19,6 +19,25 @@
           flex-direction: column;
           justify-content: center;
           align-items: center;
+          position: relative;
+      }
+
+      .header {
+          position: absolute;
+          top: 20px;
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          font-family: 'Bungee', cursive;
+          font-size: 1em;
+      }
+
+      .contact {
+          left: 20px;
+      }
+
+      .adresse {
+          right: 20px;
       }
 
       h1 {
@@ -62,6 +81,11 @@
   </style>
 </head>
 <body>
+  <div class="header">
+      <div class="contact">Contact 0140868060</div>
+      <div class="adresse">190 rue des Bourguignons Asnières</div>
+  </div>
+
   <h1 id="titre">Styl Coiffure</h1>
   
   <div class="container">
