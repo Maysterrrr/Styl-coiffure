@@ -1,33 +1,79 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Styl Coiffure</title>
-   <style>
-       body {
-           margin: 0;
-           font-family: Arial, sans-serif;
-           background: #000000;
-           color: rgb(3, 3, 3);
-           text-align: center;
-           padding: 50px;
-       }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Styl Coiffure</title>
+  <style>
+      @import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+      
+      body {
+          margin: 0;
+          font-family: Arial, sans-serif;
+          background: #000000;
+          color: white;
+          text-align: center;
+          padding: 50px;
+          height: 100vh;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+      }
 
-       h1 {
-           font-size: 3em;
-           margin: 0;
-       }
-   </style>
+      h1 {
+          font-size: 3em;
+          margin: 0 0 50px 0;
+          font-family: 'Bungee', cursive;
+          color: white;
+      }
+
+      .container {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: 100%;
+          max-width: 800px;
+      }
+
+      .bulle {
+          background: white;
+          color: black;
+          padding: 20px 30px;
+          border-radius: 50px;
+          font-size: 1.2em;
+          font-weight: bold;
+          cursor: pointer;
+          transition: transform 0.3s ease;
+          box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+      }
+
+      .bulle:hover {
+          transform: scale(1.1);
+      }
+
+      .bulle-gauche {
+          margin-right: auto;
+      }
+
+      .bulle-droite {
+          margin-left: auto;
+      }
+  </style>
 </head>
 <body>
-   <h1 id="titre">Styl Coiffure</h1>
-   
-   <script>
-       function modifierPolice('Georgia, serif') {
-           const titre = document.getElementById('titre');
-           titre.style.fontFamily = nouvellePolice;
-       }
-   </script>
+  <h1 id="titre">Styl Coiffure</h1>
+  
+  <div class="container">
+      <div class="bulle bulle-gauche">Réservation</div>
+      <div class="bulle bulle-droite">Prix</div>
+  </div>
+
+  <script>
+      function modifierPolice(nouvellePolice) {
+          const titre = document.getElementById('titre');
+          titre.style.fontFamily = nouvellePolice;
+      }
+  </script>
 </body>
 </html>
