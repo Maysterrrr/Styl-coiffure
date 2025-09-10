@@ -6,7 +6,6 @@
 <title>Styl Coiffure</title>
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
-
     body {
         margin: 0;
         font-family: Arial, sans-serif;
@@ -22,7 +21,6 @@
         align-items: center;
         position: relative;
     }
-
     .header {
         position: relative;
         width: 100%;
@@ -34,23 +32,29 @@
         box-sizing: border-box;
         margin-bottom: 50px;
     }
-
     .contact, .adresse {
         cursor: pointer;
         transition: color 0.3s ease;
     }
-
     .contact:hover, .adresse:hover {
         color: #ccc;
     }
-
-    h1 {
+    .bulle-titre {
+        background: white;
+        color: black;
+        padding: 40px 60px;
+        border-radius: 50px;
         font-size: 3em;
-        margin: 50px 0;
+        font-weight: bold;
         font-family: 'Bungee', cursive;
-        color: white;
+        margin: 50px 0;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+        box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
     }
-
+    .bulle-titre:hover {
+        transform: scale(1.05);
+    }
     .container {
         display: flex;
         justify-content: space-between;
@@ -59,7 +63,6 @@
         max-width: 800px;
         margin: 50px 0;
     }
-
     .bulle {
         background: white;
         color: black;
@@ -71,15 +74,12 @@
         transition: transform 0.3s ease;
         box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
     }
-
     .bulle:hover {
         transform: scale(1.1);
     }
-
     .bulle-gauche {
         margin-right: auto;
     }
-
     .bulle-droite {
         margin-left: auto;
     }
@@ -89,15 +89,14 @@
             flex-direction: column;
             gap: 30px;
         }
-
         .header {
             flex-direction: column;
             text-align: center;
             gap: 10px;
         }
-
-        h1 {
+        .bulle-titre {
             font-size: 2em;
+            padding: 30px 45px;
         }
     }
 </style>
@@ -107,7 +106,7 @@
     <div class="contact" onclick="window.open('tel:0140868060')">Contact 0140868060</div>
     <div class="adresse" onclick="window.open('https://www.google.com/maps/search/?api=1&query=190+rue+des+Bourguignons+Asnières', '_blank')">190 rue des Bourguignons Asnières</div>
 </div>
-<h1 id="titre">Styl Coiffure</h1>
+<div class="bulle-titre" id="titre">Styl Coiffure</div>
 <div class="container">
     <div class="bulle bulle-gauche">Réservation</div>
     <div class="bulle bulle-droite">Prix</div>
