@@ -87,25 +87,101 @@
        .bulle-droite {
            margin-left: auto;
        }
+
+       /* Page des prix */
+       .prix-page {
+           display: none;
+       }
+
+       .prix-container {
+           display: flex;
+           justify-content: space-between;
+           align-items: center;
+           width: 100%;
+           max-width: 800px;
+           gap: 50px;
+       }
+
+       .prix-bulle {
+           background: white;
+           color: black;
+           padding: 30px 40px;
+           border-radius: 50px;
+           font-size: 1.5em;
+           font-weight: bold;
+           font-family: 'Bungee', cursive;
+           box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+           flex: 1;
+           text-align: center;
+       }
+
+       .retour {
+           position: absolute;
+           top: 20px;
+           left: 50%;
+           transform: translateX(-50%);
+           background: white;
+           color: black;
+           padding: 10px 20px;
+           border-radius: 25px;
+           cursor: pointer;
+           font-family: 'Bungee', cursive;
+           font-size: 1em;
+           transition: transform 0.3s ease;
+       }
+
+       .retour:hover {
+           transform: translateX(-50%) scale(1.1);
+       }
    </style>
 </head>
 <body>
-   <div class="header">
-       <div class="contact" onclick="window.open('tel:0140868060')">Contact 0140868060</div>
-       <div class="adresse" onclick="window.open('https://www.google.com/maps/search/?api=1&query=190+rue+des+Bourguignons+Asnières', '_blank')">190 rue des Bourguignons Asnières</div>
+   <!-- Page d'accueil -->
+   <div id="accueil">
+       <div class="header">
+           <div class="contact" onclick="window.open('tel:0140868060')">Contact 0140868060</div>
+           <div class="adresse" onclick="window.open('https://www.google.com/maps/search/?api=1&query=190+rue+des+Bourguignons+Asnières', '_blank')">190 rue des Bourguignons Asnières</div>
+       </div>
+
+       <h1 id="titre">Styl Coiffure</h1>
+       
+       <div class="container">
+           <div class="bulle bulle-gauche">Réservation</div>
+           <div class="bulle bulle-droite" onclick="afficherPrix()">Prix</div>
+       </div>
    </div>
 
-   <h1 id="titre">Styl Coiffure</h1>
-   
-   <div class="container">
-       <div class="bulle bulle-gauche">Réservation</div>
-       <div class="bulle bulle-droite">Prix</div>
+   <!-- Page des prix -->
+   <div id="prix" class="prix-page">
+       <div class="retour" onclick="retourAccueil()">← Retour</div>
+       
+       <h1>Nos Tarifs</h1>
+       
+       <div class="prix-container">
+           <div class="prix-bulle">Coupe Homme<br>15 euros</div>
+           <div class="prix-bulle">Coupe Femme<br>20 euros</div>
+       </div>
    </div>
 
    <script>
        function modifierPolice(nouvellePolice) {
            const titre = document.getElementById('titre');
            titre.style.fontFamily = nouvellePolice;
+       }
+
+       function afficherPrix() {
+           document.getElementById('accueil').style.display = 'none';
+           document.getElementById('prix').style.display = 'flex';
+           document.getElementById('prix').style.flexDirection = 'column';
+           document.getElementById('prix').style.justifyContent = 'center';
+           document.getElementById('prix').style.alignItems = 'center';
+           document.getElementById('prix').style.height = '100vh';
+           document.getElementById('prix').style.position = 'relative';
+       }
+
+       function retourAccueil() {
+           document.getElementById('prix').style.display = 'none';
+           document.getElementById('accueil').style.display = 'flex';
        }
    </script>
 </body>
