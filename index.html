@@ -246,29 +246,29 @@
    }
 
    // COLLEZ VOS CHEMINS D'IMAGES ICI
-   const cheminImage1 = "COLLER_ICI_LE_CHEMIN_DE_VOTRE_IMAGE_1";
-   const cheminImage2 = "COLLER_ICI_LE_CHEMIN_DE_VOTRE_IMAGE_2";
-   const cheminImage3 = "COLLER_ICI_LE_CHEMIN_DE_VOTRE_IMAGE_3";
+   const cheminImage1 = ""C:\Users\mayst\OneDrive\Bureau\image styl coiffure\image 1.jpg"";
+   const cheminImage2 = ""C:\Users\mayst\OneDrive\Bureau\image styl coiffure\image 2.jpeg"";
+   const cheminImage3 = ""C:\Users\mayst\OneDrive\Bureau\image styl coiffure\image 3.jpg"";
 
    // Charger les images
    function chargerImages() {
        // Image 1
        if (cheminImage1 !== "COLLER_ICI_LE_CHEMIN_DE_VOTRE_IMAGE_1") {
-           document.getElementById('image1').src = "C:\Users\mayst\OneDrive\Bureau\image styl coiffure\image 1.jpg";
+           document.getElementById('image1').src = cheminImage1;
        } else {
            document.querySelector('#image1').parentElement.innerHTML = '<div class="placeholder-text">Image 1<br>Chemin à définir</div>';
        }
 
        // Image 2
        if (cheminImage2 !== "COLLER_ICI_LE_CHEMIN_DE_VOTRE_IMAGE_2") {
-           document.getElementById('image2').src = "C:\Users\mayst\OneDrive\Bureau\image styl coiffure\image 2.jpeg";
+           document.getElementById('image2').src = cheminImage2;
        } else {
            document.querySelector('#image2').parentElement.innerHTML = '<div class="placeholder-text">Image 2<br>Chemin à définir</div>';
        }
 
        // Image 3
        if (cheminImage3 !== "COLLER_ICI_LE_CHEMIN_DE_VOTRE_IMAGE_3") {
-           document.getElementById('image3').src = "C:\Users\mayst\OneDrive\Bureau\image styl coiffure\image 3.jpg";
+           document.getElementById('image3').src = cheminImage3;
        } else {
            document.querySelector('#image3').parentElement.innerHTML = '<div class="placeholder-text">Image 3<br>Chemin à définir</div>';
        }
