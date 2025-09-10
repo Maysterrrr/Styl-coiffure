@@ -9,7 +9,7 @@
            margin: 0;
            font-family: Arial, sans-serif;
            background: #000000;
-           color: white;
+           color: rgb(3, 3, 3);
            text-align: center;
            padding: 50px;
        }
@@ -21,6 +21,13 @@
    </style>
 </head>
 <body>
-   <h1>Styl Coiffure</h1>
+   <h1 id="titre">Styl Coiffure</h1>
+   
+   <script>
+       function modifierPolice('Georgia, serif') {
+           const titre = document.getElementById('titre');
+           titre.style.fontFamily = nouvellePolice;
+       }
+   </script>
 </body>
 </html>
