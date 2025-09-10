@@ -43,11 +43,37 @@
         color: #ccc;
     }
     
+    .titre-container {
+        position: relative;
+        display: inline-block;
+        margin: 50px 0;
+    }
+    
     h1 {
         font-size: 3em;
-        margin: 50px 0;
+        margin: 0;
         font-family: 'Bungee', cursive;
         color: white;
+    }
+    
+    .bulle-titre {
+        position: absolute;
+        top: -10px;
+        right: -20px;
+        background: white;
+        color: black;
+        padding: 8px 15px;
+        border-radius: 25px;
+        font-size: 0.4em;
+        font-weight: bold;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+        box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+        font-family: Arial, sans-serif;
+    }
+    
+    .bulle-titre:hover {
+        transform: scale(1.1);
     }
     
     .container {
@@ -98,6 +124,11 @@
         h1 {
             font-size: 2em;
         }
+        
+        .bulle-titre {
+            font-size: 0.5em;
+            right: -15px;
+        }
     }
 </style>
 </head>
@@ -106,14 +137,14 @@
     <div class="contact" onclick="window.open('tel:0140868060')">Contact 0140868060</div>
     <div class="adresse" onclick="window.open('https://www.google.com/maps/search/?api=1&query=190+rue+des+Bourguignons+Asnières', '_blank')">190 rue des Bourguignons Asnières</div>
 </div>
-
-<h1 id="titre">Styl Coiffure</h1>
-
+<div class="titre-container">
+    <h1 id="titre">Styl Coiffure</h1>
+    <div class="bulle-titre">Nouveau</div>
+</div>
 <div class="container">
     <div class="bulle bulle-gauche">Réservation</div>
     <div class="bulle bulle-droite">Prix</div>
 </div>
-
 <script>
     function modifierPolice(nouvellePolice) {
         const titre = document.getElementById('titre');
