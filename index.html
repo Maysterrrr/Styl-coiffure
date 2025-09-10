@@ -245,38 +245,32 @@
        titre.style.fontFamily = nouvellePolice;
    }
 
+   // COLLEZ VOS CHEMINS D'IMAGES ICI
+   const cheminImage1 = "COLLER_ICI_LE_CHEMIN_DE_VOTRE_IMAGE_1";
+   const cheminImage2 = "COLLER_ICI_LE_CHEMIN_DE_VOTRE_IMAGE_2";
+   const cheminImage3 = "COLLER_ICI_LE_CHEMIN_DE_VOTRE_IMAGE_3";
+
    // Charger les images
-   async function chargerImages() {
-       try {
-           // Image 1
-           const data1 = await window.fs.readFile('Image 1: ');
-           const blob1 = new Blob([data1]);
-           const url1 = URL.createObjectURL(blob1);
+   function chargerImages() {
+       // Image 1
+       if (cheminImage1 !== "COLLER_ICI_LE_CHEMIN_DE_VOTRE_IMAGE_1") {
            document.getElementById('image1').src = "C:\Users\mayst\OneDrive\Bureau\image styl coiffure\image 1.jpg";
+       } else {
+           document.querySelector('#image1').parentElement.innerHTML = '<div class="placeholder-text">Image 1<br>Chemin à définir</div>';
+       }
 
-           // Image 2
-           const data2 = await window.fs.readFile('Image 2: ');
-           const blob2 = new Blob([data2]);
-           const url2 = URL.createObjectURL(blob2);
-           document.getElementById('image2').src = url2;
+       // Image 2
+       if (cheminImage2 !== "COLLER_ICI_LE_CHEMIN_DE_VOTRE_IMAGE_2") {
+           document.getElementById('image2').src = "C:\Users\mayst\OneDrive\Bureau\image styl coiffure\image 2.jpeg";
+       } else {
+           document.querySelector('#image2').parentElement.innerHTML = '<div class="placeholder-text">Image 2<br>Chemin à définir</div>';
+       }
 
-           // Image 3
-           const data3 = await window.fs.readFile('Image 3: ');
-           const blob3 = new Blob([data3]);
-           const url3 = URL.createObjectURL(blob3);
-           document.getElementById('image3').src = url3;
-           
-       } catch (error) {
-           console.error('Erreur lors du chargement des images:', error);
-           // En cas d'erreur, afficher un message dans les bulles
-           document.getElementById('image1').style.display = 'none';
-           document.getElementById('image2').style.display = 'none';
-           document.getElementById('image3').style.display = 'none';
-           
-           const bulles = document.querySelectorAll('.bulle-carree');
-           bulles.forEach((bulle, index) => {
-               bulle.innerHTML = `<div class="placeholder-text">Image ${index + 1}<br>non trouvée</div>`;
-           });
+       // Image 3
+       if (cheminImage3 !== "COLLER_ICI_LE_CHEMIN_DE_VOTRE_IMAGE_3") {
+           document.getElementById('image3').src = "C:\Users\mayst\OneDrive\Bureau\image styl coiffure\image 3.jpg";
+       } else {
+           document.querySelector('#image3').parentElement.innerHTML = '<div class="placeholder-text">Image 3<br>Chemin à définir</div>';
        }
    }
 
