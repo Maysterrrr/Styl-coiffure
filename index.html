@@ -5,168 +5,197 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Styl Coiffure</title>
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
-    body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        background: 
+   @import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+   body {
+       margin: 0;
+       font-family: Arial, sans-serif;
+       background: 
 #000000;
-        color: white;
-        text-align: center;
-        padding: 50px;
-        min-height: 200vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        position: relative;
-    }
-    .header {
-        position: relative;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        font-family: 'Bungee', cursive;
-        font-size: 1em;
-        padding: 0 20px;
-        box-sizing: border-box;
-        margin-bottom: 50px;
-    }
-    .contact, .adresse {
-        cursor: pointer;
-        transition: color 0.3s ease;
-    }
-    .contact:hover, .adresse:hover {
-        color: #ccc;
-    }
-    .bulle-titre {
-        background: white;
-        color: black;
-        padding: 40px 60px;
-        border-radius: 50px;
-        font-size: 3em;
-        font-weight: bold;
-        font-family: 'Bungee', cursive;
-        margin: 50px 0;
-        cursor: pointer;
-        transition: transform 0.3s ease;
-        box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
-    }
-    .bulle-titre:hover {
-        transform: scale(1.05);
-    }
-    .container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-        max-width: 800px;
-        margin: 50px 0;
-    }
-    .bulle {
-        background: white;
-        color: black;
-        padding: 20px 30px;
-        border-radius: 50px;
-        font-size: 1.2em;
-        font-weight: bold;
-        cursor: pointer;
-        transition: transform 0.3s ease;
-        box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
-    }
-    .bulle:hover {
-        transform: scale(1.1);
-    }
-    .bulle-gauche {
-        margin-right: auto;
-    }
-    .bulle-droite {
-        margin-left: auto;
-    }
-    .container-carres {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-        max-width: 800px;
-        margin: 100px 0;
-    }
-    .bulle-carree {
-        background: white;
-        width: 200px;
-        height: 200px;
-        border-radius: 20px;
-        cursor: pointer;
-        transition: transform 0.3s ease;
-        box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .bulle-carree:hover {
-        transform: scale(1.05);
-    }
-    .bulle-carree img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 20px;
-    }
-    /* Responsive */
-    @media (max-width: 768px) {
-        .container {
-            justify-content: center;
-            gap: 20px;
-        }
-        .bulle-gauche, .bulle-droite {
-            margin: 0;
-        }
-        .container-carres {
-            flex-direction: column;
-            gap: 30px;
-        }
-        .bulle-carree {
-            width: 150px;
-            height: 150px;
-        }
-        .header {
-            flex-direction: column;
-            text-align: center;
-            gap: 10px;
-        }
-        .bulle-titre {
-            font-size: 2em;
-            padding: 30px 45px;
-        }
-    }
+       color: white;
+       text-align: center;
+       padding: 50px;
+       min-height: 200vh;
+       display: flex;
+       flex-direction: column;
+       justify-content: flex-start;
+       align-items: center;
+       position: relative;
+   }
+   .header {
+       position: relative;
+       width: 100%;
+       display: flex;
+       justify-content: space-between;
+       font-family: 'Bungee', cursive;
+       font-size: 1em;
+       padding: 0 20px;
+       box-sizing: border-box;
+       margin-bottom: 50px;
+   }
+   .contact, .adresse {
+       cursor: pointer;
+       transition: color 0.3s ease;
+   }
+   .contact:hover, .adresse:hover {
+       color: #ccc;
+   }
+   .bulle-titre {
+       background: white;
+       color: black;
+       padding: 40px 60px;
+       border-radius: 50px;
+       font-size: 3em;
+       font-weight: bold;
+       font-family: 'Bungee', cursive;
+       margin: 50px 0;
+       cursor: pointer;
+       transition: transform 0.3s ease;
+       box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+   }
+   .bulle-titre:hover {
+       transform: scale(1.05);
+   }
+   .container {
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       width: 100%;
+       max-width: 800px;
+       margin: 50px 0;
+   }
+   .bulle {
+       background: white;
+       color: black;
+       padding: 20px 30px;
+       border-radius: 50px;
+       font-size: 1.2em;
+       font-weight: bold;
+       cursor: pointer;
+       transition: transform 0.3s ease;
+       box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+   }
+   .bulle:hover {
+       transform: scale(1.1);
+   }
+   .bulle-gauche {
+       margin-right: auto;
+   }
+   .bulle-droite {
+       margin-left: auto;
+   }
+   .container-carres {
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       width: 100%;
+       max-width: 800px;
+       margin: 100px 0;
+   }
+   .bulle-carree {
+       background: white;
+       width: 200px;
+       height: 200px;
+       border-radius: 20px;
+       cursor: pointer;
+       transition: transform 0.3s ease;
+       box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       overflow: hidden;
+   }
+   .bulle-carree:hover {
+       transform: scale(1.05);
+   }
+   .bulle-carree img {
+       width: 100%;
+       height: 100%;
+       object-fit: cover;
+       border-radius: 20px;
+   }
+   /* Responsive */
+   @media (max-width: 768px) {
+       .container {
+           justify-content: center;
+           gap: 20px;
+       }
+       .bulle-gauche, .bulle-droite {
+           margin: 0;
+       }
+       .container-carres {
+           flex-direction: column;
+           gap: 30px;
+       }
+       .bulle-carree {
+           width: 150px;
+           height: 150px;
+       }
+       .header {
+           flex-direction: column;
+           text-align: center;
+           gap: 10px;
+       }
+       .bulle-titre {
+           font-size: 2em;
+           padding: 30px 45px;
+       }
+   }
 </style>
 </head>
 <body>
 <div class="header">
-    <div class="contact" onclick="window.open('tel:0140868060')">Contact 0140868060</div>
-    <div class="adresse" onclick="window.open('https://www.google.com/maps/search/?api=1&query=190+rue+des+Bourguignons+Asnières', '_blank')">190 rue des Bourguignons Asnières</div>
+   <div class="contact" onclick="window.open('tel:0140868060')">Contact 0140868060</div>
+   <div class="adresse" onclick="window.open('https://www.google.com/maps/search/?api=1&query=190+rue+des+Bourguignons+Asnières', '_blank')">190 rue des Bourguignons Asnières</div>
 </div>
 <div class="bulle-titre" id="titre">Styl Coiffure</div>
 <div class="container">
-    <div class="bulle bulle-gauche">Réservation</div>
-    <div class="bulle bulle-droite">Prix</div>
+   <div class="bulle bulle-gauche">Réservation</div>
+   <div class="bulle bulle-droite">Prix</div>
 </div>
 <div class="container-carres">
-    <div class="bulle-carree">
-        <!-- Image 1 -->
-    </div>
-    <div class="bulle-carree">
-        <!-- Image 2 -->
-    </div>
-    <div class="bulle-carree">
-        <!-- Image 3 -->
-    </div>
+   <div class="bulle-carree">
+       <img id="image1" alt="Coiffure homme 1">
+   </div>
+   <div class="bulle-carree">
+       <img id="image2" alt="Coiffure homme 2">
+   </div>
+   <div class="bulle-carree">
+       <img id="image3" alt="Coiffure homme 3">
+   </div>
 </div>
 <script>
-    function modifierPolice(nouvellePolice) {
-        const titre = document.getElementById('titre');
-        titre.style.fontFamily = nouvellePolice;
-    }
+   function modifierPolice(nouvellePolice) {
+       const titre = document.getElementById('titre');
+       titre.style.fontFamily = nouvellePolice;
+   }
+
+   // Charger les images
+   async function chargerImages() {
+       try {
+           // Image 1
+           const data1 = await window.fs.readFile('Image 1: ');
+           const blob1 = new Blob([data1]);
+           const url1 = URL.createObjectURL(blob1);
+           document.getElementById('image1').src = url1;
+
+           // Image 2
+           const data2 = await window.fs.readFile('Image 2: ');
+           const blob2 = new Blob([data2]);
+           const url2 = URL.createObjectURL(blob2);
+           document.getElementById('image2').src = url2;
+
+           // Image 3
+           const data3 = await window.fs.readFile('Image 3: ');
+           const blob3 = new Blob([data3]);
+           const url3 = URL.createObjectURL(blob3);
+           document.getElementById('image3').src = url3;
+       } catch (error) {
+           console.error('Erreur lors du chargement des images:', error);
+       }
+   }
+
+   // Charger les images au chargement de la page
+   window.addEventListener('load', chargerImages);
 </script>
 </body>
 </html>
